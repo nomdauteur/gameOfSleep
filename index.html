@@ -1,0 +1,167 @@
+<!DOCTYPE>
+<html oncontextmenu="return false">
+    <head>
+        <meta charset="UTF-16">
+        <!--<meta http-equiv="refresh" content="0.5" > -->
+        <meta name="Description" CONTENT="Игра в сон">
+        <meta name="viewport" content="height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <script src="/sdk.js"></script>
+       
+
+    <title>Игра в сон</title>
+   
+    <style>
+        .everything {
+          display: flex;
+          width: 100vw;
+          height: 98vh;
+
+        }
+
+        body {
+          -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+        }
+
+        div {
+            display: flex;
+            font-size: 3vmin;
+            text-align: center;
+            justify-content: center;
+            position: fixed;
+            width: 3.5vmin;
+            height: 3.5vmin;  
+        }
+        p {
+          margin:0;
+        }
+
+        label {
+            font-size: 3vmin;
+            text-align:left;
+        }
+
+        select {
+            font-size: 3vmin;
+            text-align:left;
+        }
+
+        .cell
+        {
+            border: 0.1vmin solid;
+            transform: translateZ(0);
+            
+        }
+
+        .legend
+        {
+            
+        }
+
+        .arrow
+        {
+          z-index:100;
+          position:absolute;
+          top: 0px;
+          justify-content: center;
+          border: solid black;
+          border-width: 0 0.1vw 0.1vw 0;
+          display: inline-block;
+          padding: 0.1vw;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+        }
+
+        .proceed
+        {
+          position: fixed;
+          font-size: 2vmin;
+            text-align: center;
+        bottom: 0px;
+        right: 1vw;
+        text-align:center;
+        margin:auto;
+        width: 15vw;
+        height: 5vh;
+        }
+
+        .button
+        {
+          position: relative;
+          font-size: 2vmin;
+            text-align: center;
+        bottom: 0px;
+        left: 1vw;
+        text-align:center;
+        margin:auto;
+        width: 15vw;
+        height: 5vh;
+        }
+
+        .clock
+        {
+          position: absolute;
+          font-size: 3vmin;
+            text-align: center;
+        top: 0px;
+        text-align:center;
+        margin:auto;
+        width: 80vw;
+        height: 5vh;
+      }
+
+      .alert
+    {
+        z-index:100;
+        display: flex;
+        width:50vw;
+        height: auto;
+        overflow: hidden;
+        background-color: #ffffff;
+        margin:auto;
+        position:absolute;
+        border: 1px solid;
+        border-radius: 5px;
+        word-wrap: break-word;
+        white-space:pre-wrap;
+        
+    }
+
+    .alert p {
+    
+    padding: 0px;
+}
+.alert input, 
+.alert select, 
+.alert label {
+    
+    margin: 0px;
+}
+.alert label {
+    text-align: left;
+}
+
+
+    </style>
+
+    <script src="functions.js"></script>
+    <script src="FieldOfSleep.js"></script>
+    <script src="gameOfSleep.js"></script>
+    </head>
+    <body onload="load()" onresize="resize()">
+      
+    </script>
+      <div id="game" class="everything" ></div>
+      <p id="lang" style="bottom:0px; left:95vw; position:fixed; display:none;">Language</p>
+
+    
+    <button id="helper" onclick="showHelp()" class="button" style="bottom:0px; left:80vw; position:fixed;">Помощь</button>    
+    </body>
+    
+</html>

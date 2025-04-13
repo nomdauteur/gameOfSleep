@@ -1,0 +1,118 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="UTF-16">
+        <!--<meta http-equiv="refresh" content="0.5" > -->
+        <meta name="Description" CONTENT="Игра в сон">
+        <meta name="viewport" content="width=500, height=600, initial-scale=1, maximum-scale=1">
+    <title>Игра в сон</title>
+   
+    <style>
+        div {
+            font-size: 40px;
+            text-align: center;
+            position: fixed;
+            width: 50px;
+            height: 50px;  
+        }
+
+        label {
+            font-size: 20px;
+            text-align:left;
+        }
+
+        select {
+            text-align:left;
+        }
+
+        .cell
+        {
+            border: 1px solid;
+            border-radius: 2px;
+            transform: translateZ(0);
+            
+        }
+
+        .legend
+        {
+            
+        }
+
+        .arrow
+        {
+          z-index:100;
+          position:absolute;
+          top: 0px;
+          border: solid black;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 3px;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+        }
+
+        .proceed
+        {
+          position: absolute;
+          font-size: 40px;
+            text-align: center;
+        bottom: 0px;
+        text-align:center;
+        margin:auto;
+        width: 500px;
+        height: 100px;
+        }
+
+        .clock
+        {
+          position: absolute;
+          font-size: 80px;
+            text-align: center;
+        top: 0px;
+        text-align:center;
+        margin:auto;
+        width: 1000px;
+        height: 100px;
+      }
+
+      .alert
+    {
+        z-index:100;
+        width:500px;
+        height:250px;
+        background-color: #ffffff;
+        margin:auto;
+        position:relative;
+        border: 1px solid;
+        border-radius: 5px;
+        word-wrap: break-word;
+        white-space:pre-wrap;
+        
+    }
+
+    .alert p {
+    display: table-row;
+    padding: 0px;
+}
+.alert input, 
+.alert select, 
+.alert label {
+    display: table-cell;
+    margin: 0px;
+}
+.alert label {
+    text-align: left;
+}
+
+
+    </style>
+    <script src="FieldOfSleep.js"></script>
+    <script src="gameOfSleep.js"></script>
+    </head>
+    <body onload="loadFunction()">
+
+    
+        
+    </body>
+    
+</html>
